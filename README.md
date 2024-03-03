@@ -1,6 +1,6 @@
 # Linguistic Uncertainty Augmentation
 
-This repository will host all code and data for the paper CommVQA: Situating Visual Question Answering in Communicative Contexts (Arxiv, 2024).
+This repository will host all code and data for the paper 
 
 Updates coming soon!
 
