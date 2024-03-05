@@ -8,3 +8,9 @@ Updates coming soon!
 
 If you find this repo or the paper useful in your research, please feel free to cite our paper:
 
+```
+@unpublished{naik2024linguistic,
+	author = {Naik, Nandita Shankar and Kiela, Douwe},
+	title = {Reducing Hallucinations in Vision-Language Models Through Linguistic Uncertainty Augmentation},
+	year = {2024}}
+```
