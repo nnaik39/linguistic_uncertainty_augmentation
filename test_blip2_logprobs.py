@@ -1,4 +1,4 @@
-# Adapted from https://discuss.huggingface.co/t/announcement-generation-get-probabilities-for-generated-output/30075
+# Following https://discuss.huggingface.co/t/announcement-generation-get-probabilities-for-generated-output/30075
 
 from PIL import Image
 import requests
@@ -9,17 +9,10 @@ import torch.nn as nn
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Just put a question in the collab-lens about compute_transition_scores?
-
-#processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b")
-#model = Blip2ForConditionalGeneration.from_pretrained(
-#    "Salesforce/blip2-opt-2.7b", torch_dtype=torch.float16, load_in_8bit=True
-#)
-
-processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-large")
-model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large", torch_dtype=torch.float16).to("cuda")
-
-loss_fct = nn.NLLLoss(reduction="none", ignore_index=model.config.pad_token_id)
+processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b")
+model = Blip2ForConditionalGeneration.from_pretrained(
+    "Salesforce/blip2-opt-2.7b", torch_dtype=torch.float16, load_in_8bit=True
+)
 
 print("Ready...")
 
